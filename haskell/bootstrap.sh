@@ -3,9 +3,10 @@
 source ~/.profile
 nix-env -i \
   bash \
-  ghc-8.2.2 \
   stack
+stack --nix --resolver nightly exec ghc -- --info
 
 nix-env --delete-generations old
-nix-collect-garbage
-sudo rm /tmp/bootstrap.sh
+sudo rm -rf \
+  ~/.stack \
+  /tmp/bootstrap.sh
