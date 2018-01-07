@@ -11,5 +11,8 @@ jobs:
           docker build -t terrorjack/vanilla:latest .
           cd .circleci
           docker build -t terrorjack/vanilla:circleci .
+          cd ../haskell
+          docker build -t terrorjack/vanilla:haskell .
           docker push terrorjack/vanilla:latest
           docker push terrorjack/vanilla:circleci
+          docker push terrorjack/vanilla:haskell
