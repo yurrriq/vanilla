@@ -1,5 +1,7 @@
 #!/bin/sh -e
 
+echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
+
 apk --no-cache --no-progress update
 apk --no-cache --no-progress add \
   bash \
