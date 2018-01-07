@@ -5,13 +5,8 @@ echo "unset NIX_PATH" >> ~/.profile
 echo "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" >> ~/.profile
 echo "source ~/.nix-profile/etc/profile.d/nix.sh" >> ~/.profile
 
-source ~/.nix-profile/etc/profile.d/nix.sh
-nix-env -i \
-  git \
-  gnutar \
-  gzip \
-  nss-cacert \
-  openssh
+source ~/.profile
+nix-env -i nss-cacert
 
 sudo apk --no-cache --no-progress del \
   bash \

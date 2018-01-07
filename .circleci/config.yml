@@ -9,4 +9,7 @@ jobs:
       - run: |
           docker login -u terrorjack -p $DOCKER_PASS
           docker build -t terrorjack/vanilla .
+          cd .circleci
+          docker build -t terrorjack/vanilla:circleci .
           docker push terrorjack/vanilla
+          docker push terrorjack/vanilla:circleci
