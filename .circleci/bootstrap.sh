@@ -7,5 +7,6 @@ nix-env -i \
   gzip \
   openssh
 
+nix-env --delete-generations old
 nix-collect-garbage
 sudo rm /tmp/bootstrap.sh

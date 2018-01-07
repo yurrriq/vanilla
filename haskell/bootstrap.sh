@@ -6,5 +6,6 @@ nix-env -i \
   ghc-8.2.2 \
   stack
 
+nix-env --delete-generations old
 nix-collect-garbage
 sudo rm /tmp/bootstrap.sh

@@ -11,5 +11,6 @@ nix-env -i nss-cacert
 sudo apk --no-cache --no-progress del \
   bash \
   curl
+nix-env --delete-generations old
 nix-collect-garbage
 sudo rm /tmp/bootstrap.sh
