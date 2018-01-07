@@ -11,6 +11,6 @@ apk --no-cache --no-progress add \
   sudo \
   tar
 
-adduser -G wheel -D vanilla
-echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+adduser -D vanilla
+echo "%vanilla ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 rm /tmp/init.sh
